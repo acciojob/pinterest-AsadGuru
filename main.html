@@ -1,16 +1,96 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest-like Hero Section</title>
+    <style>
+        /* General reset for margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;                   /* Use Flexbox for layout */
+            justify-content: center;         /* Center content horizontally */
+            align-items: center;             /* Center content vertically */
+            height: 100vh;                   /* Full viewport height */
+            position: relative;              /* Position relative for absolute positioning of the image */
+            overflow: hidden;               /* Ensure no overflow of the image */
+        }
+
+        .hero img {
+            position: absolute;              /* Position image absolutely within hero */
+            width: 100%;                     /* Cover the full width of the container */
+            height: 100%;                    /* Cover the full height of the container */
+            object-fit: cover;               /* Cover the container, clipping if necessary */
+            z-index: -1;                     /* Place image behind other content */
+        }
+
+        .hero-content {
+            text-align: center;              /* Center text inside the content */
+            max-width: 600px;                /* Limit width for readability */
+            padding: 20px;                   /* Padding inside the content box */
+            background: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+            border-radius: 10px;             /* Rounded corners */
+            z-index: 1;                      /* Ensure content is above the image */
+        }
+
+        .hero h1 {
+            font-size: 3rem;                 /* Large headline */
+            margin-bottom: 20px;             /* Spacing below the headline */
+        }
+
+        .hero p {
+            font-size: 1.5rem;               /* Medium paragraph text */
+            margin-bottom: 30px;             /* Spacing below the paragraph */
+        }
+
+        .cta-button,
+        .explore-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button {
+            background-color: #e60023;       /* Pinterest red */
+        }
+
+        .cta-button:hover {
+            background-color: #b3001a;       /* Darker red on hover */
+        }
+
+        .explore-button {
+            background-color: #0077cc;       /* Blue color for the Explore button */
+            margin-top: 20px;                /* Space above the button */
+        }
+
+        .explore-button:hover {
+            background-color: #005999;       /* Darker blue on hover */
+        }
+    </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+    <section class="hero">
+        <img src="https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Hero Image">
+        <div class="hero-content">
+            <h1>Your Inspiring Headline</h1>
+            <p>Discover and save creative ideas</p>
+            <a href="#" class="cta-button">Get Started</a>
+            <a href="#" class="explore-button">Explore Now</a>
+        </div>
+    </section>
 </body>
-
 </html>
