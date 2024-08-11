@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pinterest-like Hero Section</title>
     <style>
-        /* General reset for margin and padding */
+        
         * {
             margin: 0;
             padding: 0;
@@ -18,42 +18,41 @@
 
         /* Hero Section */
         .hero {
-            display: flex;                   /* Use Flexbox for layout */
-            justify-content: center;         /* Center content horizontally */
-            align-items: center;             /* Center content vertically */
-            height: 100vh;                   /* Full viewport height */
-            position: relative;              /* Position relative for absolute positioning of the image */
-            overflow: hidden;               /* Ensure no overflow of the image */
+            display: flex;
+            justify-content: ce
+            align-items: cent
+            height: 100v
+            position: relative;             
+            overflow: hidden;     
         }
 
         .hero img {
-            position: absolute;              /* Position image absolutely within hero */
-            width: 100%;                     /* Cover the full width of the container */
-            height: 100%;                    /* Cover the full height of the container */
-            object-fit: cover;               /* Cover the container, clipping if necessary */
-            z-index: -1;                     /* Place image behind other content */
+            position: absolute;          
+            width: 100%;                 
+            height: 100%;                 
+            object-fit: cover;               
+            z-index: -1;                     
         }
 
         .hero-content {
-            text-align: center;              /* Center text inside the content */
-            max-width: 600px;                /* Limit width for readability */
-            padding: 20px;                   /* Padding inside the content box */
-            background: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
-            border-radius: 10px;             /* Rounded corners */
-            z-index: 1;                      /* Ensure content is above the image */
+            text-align: center;              
+            max-width: 600px;                
+            padding: 20px;                   
+            background: rgba(0, 0, 0, 0.5); 
+            border-radius: 10px;            
+            z-index: 1;                      
         }
 
         .hero h1 {
-            font-size: 3rem;                 /* Large headline */
-            margin-bottom: 20px;             /* Spacing below the headline */
+            font-size: 3rem;                 
+            margin-bottom: 20px;             
         }
 
         .hero p {
-            font-size: 1.5rem;               /* Medium paragraph text */
-            margin-bottom: 30px;             /* Spacing below the paragraph */
+            font-size: 1.5rem;               
+            margin-bottom: 30px;             
         }
 
-        .cta-button,
         .explore-button {
             display: inline-block;
             padding: 15px 30px;
@@ -64,21 +63,13 @@
             transition: background-color 0.3s;
         }
 
-        .cta-button {
-            background-color: #e60023;       /* Pinterest red */
-        }
-
-        .cta-button:hover {
-            background-color: #b3001a;       /* Darker red on hover */
-        }
-
         .explore-button {
-            background-color: #0077cc;       /* Blue color for the Explore button */
-            margin-top: 20px;                /* Space above the button */
+            background-color: #0077cc;       
+            margin-top: 20px;                
         }
 
         .explore-button:hover {
-            background-color: #005999;       /* Darker blue on hover */
+            background-color: #005999;       
         }
     </style>
 </head>
@@ -86,9 +77,9 @@
     <section class="hero">
         <img src="https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Hero Image">
         <div class="hero-content">
-            <h1>Your Inspiring Headline</h1>
+            <h1>Welcome to my<br>Pinterest clone</h1>
             <p>Discover and save creative ideas</p>
-            <a href="#" class="cta-button">Get Started</a>
+            <!-- <a href="#" class="cta-button">Get Started</a> -->
             <a href="#" class="explore-button">Explore Now</a>
         </div>
     </section>
